@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>上传</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="../ico.png">
+
+</head>
+
+<body>
+    <!-- img upload-->
+    <form action="uploadimg.php" method="post" enctype="multipart/form-data">
+        <h3>选择图片</h3>
+        <input type="file" name="imgToUpload" id="imgToUpload">
+        <input type="submit" value="提交图片" name="submit">
+    </form>
+
+    <!-- link upload-->
+    <form method="post" action="uplink.php">
+        <h3>上传链接</h3>
+        <h4 style="color:rgb(85, 85, 219)"><a href="howtouplinks.html">第一次上传链接必必必必看！！！</a></h4>
+        <input type="text" name="uplink" size="10">
+        <input type="submit" value="提交链接" name="sblink">
+    </form>
+    <br>
+    <button onclick="window.location.href='index.htm'">返回主页</button>
+</body>
+
+</html>
