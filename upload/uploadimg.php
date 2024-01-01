@@ -31,7 +31,7 @@ if($imageFileType != "jpg" && $imageFileType != "webp" && $imageFileType != "png
 && $imageFileType != "gif" ) {
   echo "请上传jpg, jpeg, png, webp, gif格式的图片";
   echo "1.5秒后跳转至上传页面";
-  header("refresh:1.5;url=upload.html");
+  header("refresh:1.5;url=index.html");
   $uploadOk = 0;
 }
 
@@ -45,7 +45,7 @@ if ($uploadOk == 0) {
   if (move_uploaded_file($_FILES["imgToUpload"]["tmp_name"], $target_file)) {
     echo "图片 ". htmlspecialchars( basename( $_FILES["imgToUpload"]["name"])). " 已上传";
     echo "1.5秒后跳转至主页";
-    header("refresh:1.5;url=../index.htm");
+    header("refresh:1.5;url=../index.html");
   } else {
     echo "oops你的图片没有上传，请重试或联系HungryHenry";
     echo "1.5秒后跳转至上传页面";

@@ -2389,7 +2389,7 @@
 
 	::-webkit-input-placeholder {
 		color: rgba(255, 255, 255, 0.5) !important;
-		opacity: 1.0;
+		opacity: 0;
 	}
 
 	:-moz-placeholder {
@@ -3418,12 +3418,19 @@
 				top:10px;
 				left:30px;
 			}
+			img{
+				width:50px;
+			}
 		}
 		@media screen and (max-width: 736px) {
 			s{
 				top:50px;
 				right:10px;
 			}
+			img{
+				width:40px;
+			}
+			
 		}
 
 	body.landing #page-wrapper {
@@ -3714,10 +3721,6 @@
 			}
 
 	}
-
-	#trans{
-		z-index:99999;
-		}
 /* Small */
 
 	#navPanel, #titleBar {
@@ -4112,3 +4115,26 @@
 					}
 
 	}
+
+button {
+	padding: 0;
+	background-color: transparent;
+	border:none;
+}
+
+#trsl{
+	#st{
+		display:block;
+	}
+	#nd{
+		display: none;
+	}
+  }
+#trsl:hover{
+	#st{
+		display:none;
+	}
+	#nd{
+		display:block;
+	}
+  }
