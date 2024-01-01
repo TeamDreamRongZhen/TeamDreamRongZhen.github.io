@@ -7,6 +7,6 @@
         fclose($myfile);
         echo "上传成功";
         echo "1.5秒后跳转至主页";
-        header("refresh:1.5;url=../index.html");
+        header("refresh:1.5;url=../index.htm");
     }
 ?>
