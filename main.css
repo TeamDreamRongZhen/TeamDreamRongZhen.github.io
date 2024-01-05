@@ -2621,6 +2621,7 @@ ul {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		justify-content: center;
 	}
 
 		ul.icons li {
@@ -2630,13 +2631,11 @@ ul {
 			padding: 0 0.5em;
 		}
 
-			ul.icons li .icon {
-				font-size: 0.8em;
-			}
+		ul.icons li .icon img {
+			width: 4em;
+			height: auto;
+		  }
 
-				ul.icons li .icon:before {
-					font-size: 2em;
-				}
 
 	ul.actions {
 		cursor: default;
