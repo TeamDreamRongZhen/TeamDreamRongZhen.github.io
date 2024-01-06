@@ -2553,6 +2553,7 @@ ul {
 		cursor: default;
 		list-style: none;
 		padding-left: 0;
+		padding-top:10px;
 		justify-content:center;
 	}
 
@@ -2561,8 +2562,12 @@ ul {
 		}
 
 		ul.icons li .icon img {
-			width: 3em;
-			height: auto;
+			height: 1.2em;
+			width:auto;
+		  }
+
+		ul.icons li .icon img:hover {
+			opacity: 0.5;
 		  }
 
 
@@ -3359,10 +3364,13 @@ body.landing #header {
 }
 
 /* Banner */
-
+#high{
+	display: none;
+}
 #banner {
 	background-attachment: fixed;
 	background-color: #272833;
+	background-image: url(img/bannerlow.jpg);
 	background-position: center center;
 	background-size: cover;
 	min-height: 100vh;
@@ -3442,7 +3450,8 @@ body.is-touch #banner {
 
 #footer {
 	background: #272833;
-	padding: 6em 0;
+	padding-top: 1em;
+	padding-bottom: 0.1em;
 	text-align: center;
   	align-items: center;
 }
@@ -3467,30 +3476,14 @@ body.is-touch #banner {
 
 	#footer .copyright {
 		color: rgba(255, 255, 255, 0.5);
+		position: relative;
 		font-size: 0.8em;
-		line-height: 1em;
-		margin: 2em 0 0 0;
+		line-height: 1.3em;
+		bottom: 0px;
 		padding: 0;
 		text-align: center;
 	}
 
-		#footer .copyright li {
-			border-left: solid 1px rgba(255, 255, 255, 0.3);
-			display: inline-block;
-			list-style: none;
-			margin-left: 1.5em;
-			padding-left: 1.5em;
-		}
-
-			#footer .copyright li:first-child {
-				border-left: 0;
-				margin-left: 0;
-				padding-left: 0;
-			}
-
-			#footer .copyright li a {
-				color: inherit;
-			}
 
 /* XLarge */
 
@@ -4020,14 +4013,6 @@ body.is-touch #banner {
 			#footer .copyright {
 				line-height: inherit;
 			}
-
-				#footer .copyright li {
-					border-left: 0;
-					display: block;
-					margin: 0;
-					padding: 0;
-				}
-
 }
 
 button {
@@ -4036,6 +4021,12 @@ background-color: transparent;
 border:none;
 }
 
+
+#trsl{
+	position:fixed;
+	right:10px;
+	bottom:30px;
+}
 
 #trsl:hover{
 opacity: 0.5;

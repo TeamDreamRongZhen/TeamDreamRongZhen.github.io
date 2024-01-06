@@ -33,14 +33,15 @@
             <s>
                 <li>
                     <button type="button" onclick="window.location.href='index_en.html'" id="trsl">
-                        <image src="img/zh_en1.png" alt="translate" id="trans"></image>
+                        <image src="img/zh_en1.png" alt="translate"></image>
                     </button>
                 </li>
             </s>
         </header>
 
         <!-- Banner -->
-        <section id="banner" style="background-image: url(img/banner.jpg);">
+        <section id="banner">
+            <img src="img/banner.jpg" id="high">
             <div class="content">
                 <header>
                     <h2>荣臻梦之队</h2>
@@ -386,8 +387,11 @@
                 <li><a href="mailto:yueran.shen@teamdream-byrz.xyz" class="icon"><img src="img/mail.png"></a></li>
             </ul>
             <ul class="actions">
-                <li><a href="#banner" class="button special">Back to Top</a></li>
+                <li><a href="#banner" class="button special">回到顶部</a></li>
             </ul>
+            <p class="copyright">© 2023 - <span id="year"></span>&nbsp;TeamDream版权所有<br>鸣谢网站制作:
+                 <strong style="color:white;font-size: 1em;font-weight: bold;" class="copyright">HungryHenry</strong>
+                <a href="https://hungry-henry.github.io/">个人网站</a></p>
         </footer>
 
     </div>
@@ -399,16 +403,21 @@
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
-
     <script type="text/javascript" src="assets/js/before-after.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function()
+		{
+            //copyright
+            var year = new Date().getFullYear();
+            document.getElementById("year").innerHTML = year;
+        };
+    </script>
+
     <script type="text/javascript">
         $('.ba-slider').beforeAfter();
     </script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
-    <script language="javascript" id="_fed_an_ua_tag"
-        src="../../Universal-Federated-Analytics-Min.js?agency=NASA"></script>
-
 </body>
 
 </html>

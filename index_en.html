@@ -38,7 +38,8 @@
         </header>
 
         <!-- Banner -->
-        <section id="banner" style="background-image: url(img/banner.jpg);">
+        <section id="banner">
+            <img src="img/banner.jpg" id="high">
             <div class="content">
                 <header>
                     <h2>Team Dream RongZhen</h2>
@@ -385,14 +386,16 @@
             <ul class="icons">
                 <li><a href="https://space.bilibili.com/3546600993458304?spm_id_from=333.337.0.0" target="_blank" class="icon"><img src="img/bili.png"></a></li>
                 <li><a href="https://www.youtube.com/channel/UCZ6dLX5TMbK4O0ha05JHkkA" target="_blank" class="icon"><img src="img/youtube.png"></a></li>
-                <li><a href="mailto:?subject=NASA%20Ocean%20Worlds&body=Water%20in%20the%20Solar%20System%20and%20Beyound.%20Follow%20this%20link%20for%20more%20information:%20http://www.nasa.gov/specials/ocean-worlds/"
-                        class="icon alt fa notfa-envelope-o"><span class="label">Email</span></a></li>
-                        <!--yueran.shen@teamdream-byrz.xyz-->
+                <li><a href="" class="icon"><img src="img/wxSPH.png"></a></li>
+                <li><a href="mailto:yueran.shen@teamdream-byrz.xyz" class="icon"><img src="img/mail.png"></a></li>
 
             </ul>
             <ul class="actions">
                 <li><a href="#banner" class="button special">Back to Top</a></li>
             </ul>
+            <p class="copyright">© 2023 - <span id="year"></span> TeamDreamRongZhen All Rights Reserved<br>Thanks HungryHenry For The Making Of The Website:
+                <strong style="color:white;font-size: 1em;font-weight: bold;" class="copyright">HungryHenry</strong>
+               <a href="https://hungry-henry.github.io/">Personal Website</a></p></p>
         </footer>
 
     </div>
@@ -406,10 +409,19 @@
     <script src="assets/js/util.js"></script>
 
     <script type="text/javascript" src="assets/js/before-after.js"></script>
+
+    <script type="text/javascript">
+        window.onload = function()
+		{
+            //copyright
+            var year = new Date().getFullYear();
+            document.getElementById("year").innerHTML = year;
+        };
+    </script>
+
     <script type="text/javascript">
         $('.ba-slider').beforeAfter();
     </script>
-    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
     <script language="javascript" id="_fed_an_ua_tag"
         src="../../Universal-Federated-Analytics-Min.js?agency=NASA"></script>
