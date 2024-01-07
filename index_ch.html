@@ -40,8 +40,7 @@
         </header>
 
         <!-- Banner -->
-        <section id="banner">
-            <img src="img/banner.jpg" id="high">
+        <section id="banner" style="background-image: url(img/bannerlow.jpg);">
             <div class="content">
                 <header>
                     <h2>荣臻梦之队</h2>
@@ -382,7 +381,8 @@
                 <p></p>
             </header>
             <ul class="icons">
-                <li><a href="https://space.bilibili.com/3546600993458304?spm_id_from=333.337.0.0" target="_blank" class="icon"><img src="img/bili.png"></a></li>
+                <li><a href="https://space.bilibili.com/3546600993458304?spm_id_from=333.337.0.0" target="_blank"
+                        class="icon"><img src="img/bili.png"></a></li>
                 <li><a href="" class="icon"><img src="img/wxSPH.png"></a></li>
                 <li><a href="mailto:yueran.shen@teamdream-byrz.xyz" class="icon"><img src="img/mail.png"></a></li>
             </ul>
@@ -390,8 +390,9 @@
                 <li><a href="#banner" class="button special">回到顶部</a></li>
             </ul>
             <p class="copyright">© 2023 - <span id="year"></span>&nbsp;TeamDream版权所有<br>鸣谢网站制作:
-                 <strong style="color:white;font-size: 1em;font-weight: bold;" class="copyright">HungryHenry</strong>
-                <a href="https://hungry-henry.github.io/">个人网站</a></p>
+                <strong style="color:white;font-size: 1em;font-weight: bold;" class="copyright">HungryHenry</strong>
+                <a href="https://hungry-henry.github.io/">个人网站</a>
+            </p>
         </footer>
 
     </div>
@@ -405,9 +406,24 @@
     <script src="assets/js/util.js"></script>
     <script type="text/javascript" src="assets/js/before-after.js"></script>
 
+    <script>
+        const blurDivs = document.querySelector("#banner")
+        blurDivs.forEach(div => {
+            const img = div.querySelector("img")
+            function loaded() {
+                div.classList.add("loaded")
+                document.getElementById("banner").style.backgroundImage = "url('img/banner.jpg')"
+            }
+            if (img.complete) {
+                loaded()
+            } else {
+                img.addEventListener("load", loaded)
+            }
+        })
+    </script>
+
     <script type="text/javascript">
-        window.onload = function()
-		{
+        window.onload = function () {
             //copyright
             var year = new Date().getFullYear();
             document.getElementById("year").innerHTML = year;

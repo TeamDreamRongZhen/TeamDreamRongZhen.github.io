@@ -24,7 +24,7 @@
                         <ul>
                             <li><a href="#egnrg-dsgn-prcss">Engineering Design Process</a></li>
                             <li><a href="#one">Deep-sea Exploration</a></li>
-                            <li><a href="#one">海洋知识<!--Translate--></a></li>
+                            <li><a href="#one">Ocean knowledge<!--Mb Need Change--></a></li>
                             <li><a href="#one">About Us</a></li>
                         </ul>
                     </li>
@@ -38,8 +38,7 @@
         </header>
 
         <!-- Banner -->
-        <section id="banner">
-            <img src="img/banner.jpg" id="high">
+        <section id="banner" style="background-image: url(img/bannerlow.jpg);">
             <div class="content">
                 <header>
                     <h2>Team Dream RongZhen</h2>
@@ -409,6 +408,21 @@
     <script src="assets/js/util.js"></script>
 
     <script type="text/javascript" src="assets/js/before-after.js"></script>
+
+    <script>
+        const blurDivs = document.querySelector("#banner")
+        blurDivs.forEach(div => {
+            const img = div.querySelector("img")
+            function loaded() {
+                div.classList.add("loaded")
+            }
+            if (img.complete) {
+                loaded()
+            } else {
+                img.addEventListener("load", loaded)
+            }
+        })
+    </script>
 
     <script type="text/javascript">
         window.onload = function()

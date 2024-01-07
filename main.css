@@ -2430,6 +2430,7 @@ input[type="radio"] + label:before {
 .image {
 	border-radius: 4px;
 	border: 0;
+	margin-top: 3em;
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
@@ -2483,7 +2484,7 @@ input[type="radio"] + label:before {
 
 	@media screen and (min-width: 980px){
 		.image{
-				right: 27px;
+				right: 28px;
 			}
 	}
 	@media screen and (max-width: 980px) {
@@ -3364,13 +3365,10 @@ body.landing #header {
 }
 
 /* Banner */
-#high{
-	display: none;
-}
+
 #banner {
 	background-attachment: fixed;
 	background-color: #272833;
-	background-image: url(img/bannerlow.jpg);
 	background-position: center center;
 	background-size: cover;
 	min-height: 100vh;
