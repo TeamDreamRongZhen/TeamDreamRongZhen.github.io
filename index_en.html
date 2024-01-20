@@ -33,6 +33,7 @@
             <s>
                 <li>
                     <button type="button" onclick="window.location.href='index_ch.html'" id="trsl"><image src="img/zh_en1.png" alt="translate" id="trans"></image></button>
+                    <button type="button" id="btTop"><image src="img/bttop.png"></image></button>
                 </li>
             </s>
         </header>
@@ -42,13 +43,13 @@
             <div class="content">
                 <header>
                     <h2>Team Dream RongZhen</h2>
-                    <h4>北京市八一学校</h4>
+                    <h4>Beijing Bayi School</h4>
                     <p>Greetings from the depths of innovation and camaraderie! We 
                         are Team Dream Rongzhen, an underwater robot team from Beijing
                         Bayi School, China. Scroll down to learn more about us（占位
                         占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位占位）</p>
                 </header>
-                <span class="image"><img src="/img/ico.png" alt="ico"></span>
+                <span class="image"><img src="img/ico.png" alt="ico"></span>
                 <p></p>
             </div>
             <a href="#egnrg-dsgn-prcss" class="goto-next scrolly">Next</a>
@@ -387,14 +388,10 @@
                 <li><a href="https://www.youtube.com/channel/UCZ6dLX5TMbK4O0ha05JHkkA" target="_blank" class="icon"><img src="img/youtube.png"></a></li>
                 <li><a href="" class="icon"><img src="img/wxSPH.png"></a></li>
                 <li><a href="mailto:yueran.shen@teamdream-byrz.xyz" class="icon"><img src="img/mail.png"></a></li>
-
-            </ul>
-            <ul class="actions">
-                <li><a href="#banner" class="button special">Back to Top</a></li>
             </ul>
             <p class="copyright">© 2023 - <span id="year"></span> TeamDreamRongZhen All Rights Reserved<br>Thanks HungryHenry For The Making Of The Website:
-                <strong style="color:white;font-size: 1em;font-weight: bold;" class="copyright">HungryHenry</strong>
-               <a href="https://hungry-henry.github.io/">Personal Website</a></p></p>
+                <strong style="color:white;font-size: 1em;font-weight: bold;" class="copyright">HungryHenry</strong>'s
+               <a href="http://hungryhenry.great-site.net/">Personal Website</a></p></p>
         </footer>
 
     </div>
@@ -433,6 +430,31 @@
         };
     </script>
 
+    <script type="text/javascript">
+        var anchorLink = document.getElementById("btTop"),
+        target = document.getElementById("banner");
+        anchorLink.addEventListener("click", function(e) {
+            if (window.scrollTo) {
+                e.preventDefault();
+                window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
+            }
+        })
+    </script>
+
+    <script>
+        var banner = document.getElementById("banner");
+        var lowimg = new Image();
+        lowimg.onload = function () {
+            banner.style.backgroundImage = "url(img/bannerlow.jpg)";
+            var highimg = new Image();
+            highimg.onload = function () {
+                banner.style.backgroundImage = "url(img/banner.jpg)";
+            };
+            highimg.src = "img/banner.jpg";
+        };
+        lowimg.src = "img/bannerlow.jpg";
+    </script>
+    
     <script type="text/javascript">
         $('.ba-slider').beforeAfter();
     </script>

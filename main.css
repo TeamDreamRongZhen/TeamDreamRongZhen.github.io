@@ -3374,7 +3374,7 @@ body.landing #header {
 	min-height: 100vh;
 	position: relative;
 	text-align: center;
-	z-index: 21;
+	z-index: 28;
 }
 
 	#banner:before {
@@ -4028,4 +4028,29 @@ border:none;
 
 #trsl:hover{
 opacity: 0.5;
+}
+
+#home{
+	position:fixed;
+	left:20px;
+	top:20px;
+}
+
+#home:hover{
+	opacity: 0.6;
+}
+
+#btTop{
+	position:fixed;
+	left:10px;
+	bottom:30px;
+}
+
+#btTop > img{
+	width:35px;
+	height:auto;
+}
+
+#btTop:hover{
+	opacity:0.6;
 }
