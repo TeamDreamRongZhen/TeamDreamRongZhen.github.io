@@ -2431,31 +2431,11 @@ input[type="radio"] + label:before {
 	border-radius: 4px;
 	border: 0;
 	margin-top: 3em;
-	display: inline-block;
 	position: relative;
-	overflow: hidden;
 }
-
-	.image:before {
-		content: '';
-		display: block;
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-	}
-
-	.image img {
-		border-radius: 4px;
-		display: block;
-	}
 
 	.image.left {
 		float: left;
-		margin: 0 1.5em 1em 0;
-		top: 0.25em;
 	}
 
 	.image.right {
@@ -2464,35 +2444,6 @@ input[type="radio"] + label:before {
 		top: 0.25em;
 	}
 
-	.image.left, .image.right {
-		max-width: 40%;
-	}
-
-		.image.left img, .image.right img {
-			width: 100%;
-		}
-
-	.image.fit {
-		display: block;
-		margin: 0 0 2em 0;
-		width: 100%;
-	}
-
-		.image.fit img {
-			width: 100%;
-		}
-
-	@media screen and (min-width: 980px){
-		.image{
-				right: 28px;
-			}
-	}
-	@media screen and (max-width: 980px) {
-		.image{
-			right: 0;
-		}
-	}
-	
 
 /* video */		
 
@@ -2958,10 +2909,6 @@ input[type="button"],
 		left: 0;
 		top: 0;
 		width: 100%;
-	}
-
-	.spotlight .image.main {
-		display: none;
 	}
 
 		.spotlight .image.main img {
@@ -3563,12 +3510,6 @@ body.is-touch #banner {
 			height: auto;
 		}
 
-			.spotlight .image.main {
-				display: block;
-				margin: 0;
-				max-height: 40vh;
-				overflow: hidden;
-			}
 
 			.spotlight .content {
 				background-color: #1c1d26;
@@ -3693,10 +3634,6 @@ body.is-touch #banner {
 		.spotlight {
 			box-shadow: 0 0.125em 0.5em 0 rgba(0, 0, 0, 0.25);
 		}
-
-			.spotlight .image.main {
-				max-height: 60vh;
-			}
 
 			.spotlight .content {
 				border-top-width: 0.2em !important;
@@ -3982,9 +3919,6 @@ body.is-touch #banner {
 
 	/* Spotlight */
 
-		.spotlight .image.main {
-			max-height: 50vh;
-		}
 
 		.spotlight .content {
 			padding: 3em 1.25em 1em 1.25em !important;
