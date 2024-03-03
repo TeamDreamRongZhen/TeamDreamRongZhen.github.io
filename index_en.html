@@ -30,6 +30,9 @@
 			display:block;
 		}
 	}
+    img[src=""]{
+        opacity:0;
+    }
     </style>
     <link rel="icon" type="image/x-icon" href="img/ico.png">
 </head>
@@ -40,6 +43,11 @@
 
         <!-- Header -->
         <header id="header">
+            <h1 id="logo">
+                <a href="index.html">
+                    <img src="" alt="Team Dream RongZhen">
+                </a>
+            </h1>
             <nav id="nav">
                 <ul>
                     <li>
@@ -410,8 +418,8 @@
                 <li><a href="" class="icon"><img src="img/wxSPH.png"></a></li>
                 <li><a href="mailto:yueran.shen@teamdream-byrz.xyz" class="icon"><img src="img/mail.png"></a></li>
             </ul>
-            <p class="copyright">© 2024 - <span id="year"></span> TeamDreamRongZhen All Rights Reserved<br>Thanks HungryHenry For The Making Of The Website:
-                <strong style="color:white;font-size: 1em;font-weight: bold;" class="copyright">HungryHenry</strong>'s
+            <p class="copyright">© 2024 Team Dream RongZhen All Rights Reserved<br>Website Developer:
+                <strong style="color:white;font-size: 1em;font-weight: bold;" class="copyright">HungryHenry</strong>
                <a href="http://hungryhenry.great-site.net/">Personal Website</a></p></p>
         </footer>
 
@@ -427,42 +435,7 @@
 
     <script type="text/javascript" src="assets/js/before-after.js"></script>
 
-    <script>
-        const blurDivs = document.querySelector("#banner")
-        blurDivs.forEach(div => {
-            const img = div.querySelector("img")
-            function loaded() {
-                div.classList.add("loaded")
-            }
-            if (img.complete) {
-                loaded()
-            } else {
-                img.addEventListener("load", loaded)
-            }
-        })
-    </script>
-
     <script type="text/javascript">
-        window.onload = function()
-		{
-            //copyright
-            var year = new Date().getFullYear();
-            document.getElementById("year").innerHTML = year;
-        };
-    </script>
-
-    <script type="text/javascript">
-        var anchorLink = document.getElementById("btTop"),
-        target = document.getElementById("banner");
-        anchorLink.addEventListener("click", function(e) {
-            if (window.scrollTo) {
-                e.preventDefault();
-                window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
-            }
-        })
-    </script>
-
-    <script>
         var banner = document.getElementById("banner");
         var lowimg = new Image();
         lowimg.onload = function () {
@@ -474,14 +447,29 @@
             highimg.src = "img/banner.jpg";
         };
         lowimg.src = "img/bannerlow.jpg";
-    </script>
-    
-    <script type="text/javascript">
+
+        window.addEventListener('DOMContentLoaded', function() {
+            var images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                if (!img.getAttribute('src')) {
+                    var altText = img.getAttribute('alt');
+                    var textNode = document.createTextNode(altText);
+                    img.parentNode.replaceChild(textNode, img);
+                }
+            });
+        });
+
+        var anchorLink = document.getElementById("btTop"),
+        target = document.getElementById("banner");
+        anchorLink.addEventListener("click", function(e) {
+            if (window.scrollTo) {
+                e.preventDefault();
+                window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
+            }
+        })
         $('.ba-slider').beforeAfter();
     </script>
     <script src="assets/js/main.js"></script>
-    <script language="javascript" id="_fed_an_ua_tag"
-        src="../../Universal-Federated-Analytics-Min.js?agency=NASA"></script>
 
 </body>
 

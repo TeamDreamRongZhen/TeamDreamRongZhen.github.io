@@ -30,6 +30,9 @@
 			display:block;
 		}
 	}
+    img[src=""]{
+        opacity:0;
+    }
     </style>
     <link rel="icon" type="image/x-icon" href="img/ico.png">
 </head>
@@ -40,6 +43,11 @@
 
         <!-- Header -->
         <header id="header">
+            <h1 id="logo">
+                <a href="index.html">
+                    <img src="" alt="荣臻梦之队">
+                </a>
+            </h1>
             <nav id="nav">
                 <ul>
                     <li>
@@ -410,7 +418,7 @@
                 <li><a href="" class="icon"><img src="img/wxSPH.png"></a></li>
                 <li><a href="mailto:yueran.shen@teamdream-byrz.xyz" class="icon"><img src="img/mail.png"></a></li>
             </ul>
-            <p class="copyright">© 2024 - <span id="year"></span>&nbsp;TeamDream版权所有<br>鸣谢网站制作:
+            <p class="copyright">© 2024 &nbsp;Team Dream RongZhen 版权所有<br>网页开发人员：
                 <strong style="color:white;font-size: 1em;font-weight: bold;" class="copyright">HungryHenry</strong>
                 <a href="http://hungryhenry.great-site.net/">个人网站</a>
             </p>
@@ -428,7 +436,7 @@
     <script type="text/javascript" src="assets/js/before-after.js"></script>
 
 
-    <script>
+    <script type="text/javascript">
         var banner = document.getElementById("banner");
         var lowimg = new Image();
         lowimg.onload = function () {
@@ -440,9 +448,18 @@
             highimg.src = "img/banner.jpg";
         };
         lowimg.src = "img/bannerlow.jpg";
-    </script>
 
-    <script type="text/javascript">
+        window.addEventListener('DOMContentLoaded', function() {
+            var images = document.querySelectorAll('img');
+            images.forEach(function(img) {
+                if (!img.getAttribute('src')) {
+                    var altText = img.getAttribute('alt');
+                    var textNode = document.createTextNode(altText);
+                    img.parentNode.replaceChild(textNode, img);
+                }
+            });
+        });
+
         var anchorLink = document.getElementById("btTop"),
         target = document.getElementById("banner");
         anchorLink.addEventListener("click", function(e) {
@@ -451,17 +468,6 @@
                 window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
             }
         })
-    </script>
-    
-    <script type="text/javascript">
-        window.onload = function () {
-            //copyright
-            var year = new Date().getFullYear();
-            document.getElementById("year").innerHTML = year;
-        };
-    </script>
-
-    <script type="text/javascript">
         $('.ba-slider').beforeAfter();
     </script>
     <script src="assets/js/main.js"></script>
