@@ -7,33 +7,6 @@
     <title>荣臻梦之队</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
-    <style>
-        @media (min-width: 980px){
-		.image{
-				right: 28px;
-			}
-		#slim{
-			display:block;
-		}
-		#fat{
-			display: none;
-		}
-	}
-	@media (max-width: 980px) {
-		.image{
-			right: 0;
-		}
-		#slim{
-			display:none
-		}
-		#fat{
-			display:block;
-		}
-	}
-    img[src=""]{
-        opacity:0;
-    }
-    </style>
     <link rel="icon" type="image/x-icon" href="img/ico.png">
 </head>
 
@@ -51,7 +24,7 @@
             <nav id="nav">
                 <ul>
                     <li>
-                        <t href="#">内容</t>
+                        <t href="#">章节</t>
                         <ul>
                             <li><a href="#egnrg-dsgn-prcss">团队介绍</a></li>
                             <li><a href="#one">深海探索</a></li>
@@ -66,7 +39,9 @@
                     <button type="button" onclick="window.location.href='index_en.html'" id="trsl">
                         <image src="img/zh_en1.png" alt="translate"></image>
                     </button>
-                    <button type="button" id="btTop"><image src="img/bttop.png"></image></button>
+                    <button type="button" id="btTop">
+                        <image src="img/bttop.png"></image>
+                    </button>
                 </li>
             </s>
         </header>
@@ -128,24 +103,25 @@
         </section>
 
         <section id="yueran" class="spotlight style3 left">
-            <span class="image fit main bottom" id="slim"><img src="img/yueran.png"></span>
-            <span class="image fit main bottom" id="fat"><img src="img/yueran2.jpg" style="width:80%;height:auto;margin-top:-40px; margin-left: 10%;"></span>
-            
-            
+            <span class="image main bottom" id="slim"><img src="img/yueran.png"></span>
+            <span class="image main bottom" id="fat"><img src="img/yueran2.png"
+                    style="width:80%;height:auto;margin-top:-40px; margin-left: 10%;"></span>
+
+
             <div class="content">
                 <header>
                     <h2>沈跃然 Yueran Shen</h2>
                     <p>荣臻梦之队队长</p>
                 </header>
-                
-                <p>沈跃然是北京市八一学校的七年级三班的学生，现在13岁，连续参加了三年中国海鲈鱼比赛。作为荣臻梦之队的队长，他负责编写技术设计报告、设计水下机器人以及操作。有任何关于我们水下机器人和技术设计报告的问题，欢迎您通过邮箱yueran.shen@teamdreambyrz.xyz联系我。</p>
+
+                <p>沈跃然是北京市八一学校的七年级三班的学生，现在13岁，连续参加了三年中国海鲈鱼比赛。作为荣臻梦之队的队长，他负责编写技术设计报告、设计水下机器人以及操作。有任何关于我们水下机器人和技术设计报告的问题，欢迎您通过邮箱yueran.shen@teamdreambyrz.xyz联系我。
+                </p>
 
             </div>
             <a href="#water-molecule" class="goto-next scrolly">Next</a>
         </section>
 
         <section id="one" class="spotlight style1 bottom">
-            <span class="image fit main bottom" id="slim"><img src="img/1.jpg"></span>
             <div class="content">
                 <div class="container">
                     <div class="row">
@@ -180,7 +156,12 @@
 
         <!-- rosetta -->
         <section id="rosetta" class="spotlight style3 left">
-            <span class="image fit main bottom"><img src=""></span>
+            <div class="videowrapper">
+                <video class="videopreview" id="seaperch" muted autoplay playsinline>
+                    <source src="vid/seaperch.mp4" type="video/mp4">
+                    你的浏览器不支持视频标签
+                </video>
+            </div>
             <div class="content">
                 <header>
                     <h2>How did water arrive on Earth?</h2>
@@ -439,9 +420,9 @@
         };
         lowimg.src = "img/bannerlow.jpg";
 
-        window.addEventListener('DOMContentLoaded', function() {
+        window.addEventListener('DOMContentLoaded', function () {
             var images = document.querySelectorAll('img');
-            images.forEach(function(img) {
+            images.forEach(function (img) {
                 if (!img.getAttribute('src')) {
                     var altText = img.getAttribute('alt');
                     var textNode = document.createTextNode(altText);
@@ -450,12 +431,19 @@
             });
         });
 
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("seaperch");
+            video.addEventListener("click", function() {
+                window.location.href = "seaperch.html";
+            });
+        });
+
         var anchorLink = document.getElementById("btTop"),
-        target = document.getElementById("banner");
-        anchorLink.addEventListener("click", function(e) {
+            target = document.getElementById("banner");
+        anchorLink.addEventListener("click", function (e) {
             if (window.scrollTo) {
                 e.preventDefault();
-                window.scrollTo({"behavior": "smooth", "top": target.offsetTop});
+                window.scrollTo({ "behavior": "smooth", "top": target.offsetTop });
             }
         })
         $('.ba-slider').beforeAfter();

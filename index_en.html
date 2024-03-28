@@ -7,33 +7,6 @@
     <title>Team Dream RongZhen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
-    <style>
-        @media (min-width: 980px){
-		.image{
-				right: 28px;
-			}
-		#slim{
-			display:block;
-		}
-		#fat{
-			display: none;
-		}
-	}
-	@media (max-width: 981px) {
-		.image{
-			right: 0;
-		}
-		#slim{
-			display:none
-		}
-		#fat{
-			display:block;
-		}
-	}
-    img[src=""]{
-        opacity:0;
-    }
-    </style>
     <link rel="icon" type="image/x-icon" href="img/ico.png">
 </head>
 
@@ -128,7 +101,7 @@
 
         <section id="yueran" class="spotlight style3 left">
             <span class="image fit main bottom" id="slim"><img src="img/yueran.png"></span>
-            <span class="image fit main bottom" id="fat"><img src="img/yueran2.jpg" style="width:80%;height:auto;margin-top:-40px; margin-left: 10%;"></span>
+            <span class="image fit main bottom" id="fat"><img src="img/yueran2.png" style="width:80%;height:auto;margin-top:-40px; margin-left: 10%;"></span>
             <div class="content">
                 <header>
                     <h2>Yueran Shen 沈跃然</h2>
@@ -185,7 +158,12 @@
 
         <!-- rosetta -->
         <section id="rosetta" class="spotlight style3 left">
-            <span class="image fit main bottom"><img src=""></span>
+            <div class="videowrapper">
+                <video class="videopreview" id="seaperch" muted autoplay playsinline>
+                    <source src="vid/seaperch.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <div class="content">
                 <header>
                     <h2>How did water arrive on Earth?</h2>
@@ -455,6 +433,13 @@
                     var textNode = document.createTextNode(altText);
                     img.parentNode.replaceChild(textNode, img);
                 }
+            });
+        });
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            var video = document.getElementById("seaperch");
+            video.addEventListener("click", function() {
+                window.location.href = "seaperch.html";
             });
         });
 
