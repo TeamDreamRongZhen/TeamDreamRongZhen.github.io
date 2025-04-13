@@ -1,6 +1,6 @@
 # 🌊 Team Dream Rongzhen (荣臻梦之队) Official Website
 
-[English](README.md) | [简体中文](README_CN.md)
+English | [简体中文](README_CN.md)
 
 ![Team Logo](img/ico.png)
 
