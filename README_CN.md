@@ -35,8 +35,8 @@
 ## 📱 联系我们
 
 - **哔哩哔哩**：[荣臻梦之队](https://space.bilibili.com/3546600993458304)
+- **YouTube**：[@TeamDreamBYRZ](https://www.youtube.com/@TeamDreamBYRZ)
 - **邮箱**：yueran.shen@teamdream-byrz.xyz
-- **微信**：[扫描二维码](img/wxSPH.png)
 
 ## 💻 技术细节
 
