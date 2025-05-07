@@ -19,8 +19,8 @@ We are committed to:
 ## 🌟 Team Highlights
 
 - **Team Captain**: Yueran Shen (沈跃然)
-  - 7th grade student at Beijing Bayi School
-  - 3 years of experience in SeaPerch competitions
+  - 8th grade student at Beijing Bayi School
+  - 4 years of experience in SeaPerch competitions
   - Expert in technical design reports and ROV operation
 
 ## 🛠️ Website Features
@@ -48,7 +48,7 @@ This is a static website built with:
 
 ## 📄 License
 
-© 2024 Team Dream Rongzhen. All rights reserved.
+© 2025 Team Dream Rongzhen. All rights reserved.
 
 ## 👨‍💻 Developer
 
