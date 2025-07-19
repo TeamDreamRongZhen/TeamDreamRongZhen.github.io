@@ -1,6 +1,6 @@
 # 🌊 荣臻梦之队官方网站
 
-[English](README_EN.md) | 简体中文 
+[English](README_EN.MD) | 简体中文 
 
 ![团队标志](img/ico.png)
 
